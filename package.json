@@ -1,0 +1,21 @@
+{
+  "name": "parcel-react",
+  "version": "1.0.0",
+  "description": "React using parcel",
+  "author": "Pedro Roque <pedro.roque@outlook.com>",
+  "license": "MIT",
+  "source": "./src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.7.0",
+    "process": "^0.11.10"
+  }
+}
