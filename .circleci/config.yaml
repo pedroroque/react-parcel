@@ -1,0 +1,25 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@4.7
+
+jobs:
+  build-and-test:
+    docker:
+      - image: cimg/node:16.10
+    steps:
+      - checkout
+      - node/install-packages:
+          # If you are using yarn, change the line below from "npm" to "yarn"
+          pkg-manager: yarn
+      - run:
+          name: Build
+          command: yarn build
+      - run:
+          name: Run tests
+          command: yarn test:ci
+
+workflows:
+  sample:
+    jobs:
+      - build-and-test
