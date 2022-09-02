@@ -9,7 +9,9 @@
   "scripts": {
     "start": "parcel",
     "build": "parcel build",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx src"
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
+    "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx src --fix",
+    "lint:report": "eslint --ext .js,.jsx,.ts,.tsx src --format json -o reports/eslint.json"
   },
   "dependencies": {
     "@types/react": "^18.0.18",

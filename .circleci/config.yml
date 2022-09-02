@@ -2,6 +2,7 @@ version: 2.1
 
 orbs:
   node: circleci/node@4.7
+  sonarcloud: sonarsource/sonarcloud@1.0.3
 
 jobs:
   build-and-test:
@@ -15,11 +16,16 @@ jobs:
       - run:
           name: Build
           command: yarn build
+      - run:
+          name: Lint
+          command: yarn lint:report
       # - run:
       #     name: Run tests
       #     command: yarn test:ci
+      - sonarcloud/scan
 
 workflows:
-  sample:
+  main:
     jobs:
-      - build-and-test
+      - build-and-test:
+          context: SonarCloud
