@@ -1,6 +1,6 @@
-import React from "react";
+import React, { ReactElement } from 'react'
 
-export const App = () => {
+export const App = (): ReactElement => {
   return (
     <>
       <h1 className="text-3xl font-bold underline text-center">Hello world!</h1>
@@ -9,5 +9,5 @@ export const App = () => {
         <span className="text-center text-5xl text-red-800">Parcel Rocks!</span>
       </div>
     </>
-  );
-};
+  )
+}

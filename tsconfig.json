@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "project": "./tsconfig.json",
+        "strictNullChecks": true,
+        "esModuleInterop": true,
+        "jsx": "react-jsx",
+    },  
+    "strictNullChecks": true,
+}
