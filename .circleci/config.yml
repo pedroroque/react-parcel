@@ -19,6 +19,9 @@ jobs:
       - run:
           name: Lint
           command: yarn lint:report || true
+      - run:
+          name: Test
+          command: yarn test:ci
       - sonarcloud/scan
 
 workflows:
