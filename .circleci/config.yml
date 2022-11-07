@@ -23,7 +23,7 @@ jobs:
           name: Test
           command: yarn test:ci || true
       - store_test_results:
-          path: ./reports/
+          path: ./reports/junit
       - sonarcloud/scan
 
 workflows:
