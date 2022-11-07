@@ -9,4 +9,8 @@ describe('App', () => {
   it('should render', () => {
     expect(screen.getByText(/Hello World/i)).toBeDefined()
   })
+
+  it('should error', () => {
+    expect(screen.getByText(/Hello World/i)).toBeUndefined()
+  })
 })
